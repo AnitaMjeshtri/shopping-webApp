@@ -23,8 +23,6 @@ class DatabaseSeeder extends Seeder
         $xmlFile = realpath(__DIR__ . '/first-task-xml-file.xml');
 
         $parsedData= $seeders_instance->XMLtoJSON($xmlFile);
-        // $listNum = 1;
-        // $subListNum = 0;
         foreach ($parsedData['channel']['item'] as $itemData) {
           $product = Product::create([
               'product_id' =>(int) $itemData['id'],
@@ -55,23 +53,9 @@ class DatabaseSeeder extends Seeder
                 if(!empty($categoryLevels[$categoryKey])){
                   $categoryId = (int)($categoryLevels[$categoryKey]['id']);
                   $categoryName = $categoryLevels[$categoryKey]['name'];
-
-                  // if($categoryKey === 'category1'){
-                  //   $category = Category::firstOrCreate([
-                  //     'category_id' => $categoryId,
-                  //     'name' => $categoryName,
-                  //     // 'listNum' => $listNum,
-                  //     // 'subListNum' => null,
-                  //     'parent_id' => null,
-                  //     'created_at' => $now,
-                  //     'updated_at' => $now,
-                  // ]);
-                  // }else{
                     $category = Category::firstOrCreate([
                       'category_id' => $categoryId,
                       'name' => $categoryName,
-                      // 'listNum' => $listNum,
-                      // 'subListNum' => $subListNum,
                       'parent_id'=>$prevCategory ? $prevCategory->category_id : null,
                       'created_at' => $now,
                       'updated_at' => $now,
@@ -91,29 +75,19 @@ class DatabaseSeeder extends Seeder
                   $product->category()->attach($category->id);
                 }
               }
-              // $listNum+=1;
-              // $subListNum+=1;
             }
         }
         
         if (isset($itemData['gallery']['image']) && is_array($itemData['gallery']['image'])) {
-          // $galleryImages = [];
           foreach($itemData['gallery']['image'] as $imageData){
 
             $galleryImage = new Gallery([
               'image_link' => $imageData,
-              // 'product_id' => $product->id,
               'created_at' => now(),
               'updated_at' => now(),
             ]);
-
-              // $galleryImages[] = $galleryImage;
             $product->gallery()->save($galleryImage);
           }
-          // if(count($galleryImages)>=100){
-          //   Gallery::insert($galleryImages);
-          //   $galleryImages = [];
-          // }
         }
 
 }
