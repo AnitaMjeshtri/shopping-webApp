@@ -1,0 +1,22 @@
+.bg-custom-color {
+  background-color: #cbd5e1;
+}
+
+.product-card{
+  position: relative;
+  height: 200px;
+}
+.hover:shadow-lg {
+  transition: box-shadow 0.3s;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.description-container {
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+}
+
+.product-container:hover .description-container {
+height: auto;
+white-space: normal;
+}
