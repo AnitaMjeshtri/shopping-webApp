@@ -8,7 +8,7 @@ Prenatal is a feature-rich shopping web application built using React for the fr
 - Logout: Users can log out of their accounts to protect their privacy.
 
 ## Shopping Cart
-- Add Items: Users can add items to their shopping cart, even without being logged into their accounts.
+- Add Items: Users can add items to their shopping cart, even without being logged into their accounts. User cannot add items to the cart if there is no stock for that product.
 - Delete items: Users can delete items from their shopping cart.
 - View Cart: Users can view the contents of their shopping cart and manage items.
 
@@ -17,12 +17,12 @@ Prenatal is a feature-rich shopping web application built using React for the fr
 - Welcome Email: Subscribers receive a welcome email with information about the latest products and promotions.
 
 ## Product Catalog
-- Product Details: Users can click on each product card to get more information about the product.
+- Product Details: Users can click on each product card to get more information about the product. It sends the user to another page to display products basic information.
 - Image Carousel: Hovering over a product card displays a carousel with images of the product for a detailed view.
 
 ## Category Pages
-- Category Filters: Users can navigate to specific product category pages.
-- Filtering: Filters are available to refine product search by color, brand, and price.
+- Category Filters: Users can navigate to specific products by choosing a specific category.
+- Filtering: Filters are available to refine product search by color, brand, and price. To filter by brand remove filtering from color or price. Same thing goes for each of them.
 - Search Bar: Users can search for products using the search bar.
 
 ## Technologies Used
@@ -31,6 +31,8 @@ Prenatal is a feature-rich shopping web application built using React for the fr
 - Database: `MYSQL`
 Authentication: `JWT`
 Email Service: `SMTP`
+
+### Adds are not covered.
 
 ## Seeking Guidance and Feedback
 As a newcomer to these technologies, I am enthusiastic about learning and improving. I want to emphasize that your valuable feedback, suggestions, and critiques are more than welcomed. Your guidance will contribute to my growth and the enhancement of this project and my future works as well. Please feel free to reach out with any comments or recommendations. Thank you for your support!
