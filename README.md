@@ -29,8 +29,8 @@ Prenatal is a feature-rich shopping web application built using React for the fr
 - Frontend: `React`
 - Backend: `Laravel`
 - Database: `MYSQL`
-Authentication: `JWT`
-Email Service: `SMTP`
+- Authentication: `JWT`
+- Email Service: `SMTP`
 
 ### Adds are not covered.
 
