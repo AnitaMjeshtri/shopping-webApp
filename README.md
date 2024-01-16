@@ -33,6 +33,3 @@ Prenatal is a feature-rich shopping web application built using React for the fr
 - Email Service: `SMTP`
 
 ### Adds are not covered.
-
-## Seeking Guidance and Feedback
-As a newcomer to these technologies, I am enthusiastic about learning and improving. I want to emphasize that your valuable feedback, suggestions, and critiques are more than welcomed. Your guidance will contribute to my growth and the enhancement of this project and my future works as well. Please feel free to reach out with any comments or recommendations. Thank you for your support!
